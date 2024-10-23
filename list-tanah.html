@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>BeliTanah | Halaman utama</title>
+
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="relative w-full">
+        <div class="w-full bg-gray-900 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+                <h5 class="font-bold text-lg">Kenali kita lebih lanjut <a href="./about.html" class="underline">disini</a></h5>
+            </div>
+        </div>
+        <div class="relative w-full">
+            <div class="absolute top-0 right-0 left-0 bg-white/70">
+                <div class="max-w-7xl mx-auto">
+                    <div class="relative z-10 lg:pb-8 pb-0 bg-transparent">
+                        <div class="relative pt-6 px-4 sm:px-6 lg:px-8">
+                            <nav class="relative flex items-center justify-between sm:h-10">
+                                <div class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
+                                    <div class="flex items-center justify-between w-full md:w-auto">
+                                        <a href="./index.html" class="ml-2">
+                                            <span class="sr-only">BeliTanah</span>
+                                            <img class="h-6 w-auto" src="/assets/images/beli-tanah.png" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
+                                    <a href="./list-tanah.html" class="font-semibold text-lg text-gray-700 hover:text-gray-500">List tanah</a>
+                                    <a href="./list-afiliator.html" class="font-semibold text-lg text-gray-700 hover:text-gray-500">List Afiliator</a>
+                                    <a href="./simulasi-harga.html" class="font-semibold text-lg text-gray-700 hover:text-gray-500">Simulasi harga</a>
+                                    <a href="./contact-us.html" class="font-semibold text-lg  text-gray-700 hover:text-gray-500">Kontak</a>
+                                    <a href="./authentikasi.html" class="font-semibold text-lg  text-gray-700 hover:text-gray-500">Jual tanah</a>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <main class="min-h-[80vh] my-24">
+            <div class="max-w-7xl mx-auto space-y-6">
+                <h3 class="mt-6 text-3xl font-bold">List Tanah</h3>
+
+                <div>
+                    <form class="flex gap-2 max-w-[90%]">
+                        <input
+                            type="search"
+                            class="relative m-0 block flex-auto rounded border border-solid border-neutral-200 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-surface outline-none transition duration-200 ease-in-out placeholder:text-neutral-500 focus:z-[3] focus:border-primary focus:shadow-inset focus:outline-none motion-reduce:transition-none dark:border-white/10 dark:text-white dark:placeholder:text-neutral-200 dark:autofill:shadow-autofill dark:focus:border-primary"
+                            placeholder="Search by location..."
+                            aria-label="Search"
+                        />
+                     <div class="flex gap-2">
+                        <select id="large" class="block w-full px-4 py-3 text-base text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <option selected>Choose a country</option>
+                            <option value="US">United States</option>
+                            <option value="CA">Canada</option>
+                            <option value="FR">France</option>
+                            <option value="DE">Germany</option>
+                        </select>
+                        <select id="large" class="block w-full px-4 py-3 text-base text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <option selected>Choose a country</option>
+                            <option value="US">United States</option>
+                            <option value="CA">Canada</option>
+                            <option value="FR">France</option>
+                            <option value="DE">Germany</option>
+                        </select>
+                        <select id="large" class="block w-full px-4 py-3 text-base text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <option selected>Choose a country</option>
+                            <option value="US">United States</option>
+                            <option value="CA">Canada</option>
+                            <option value="FR">France</option>
+                            <option value="DE">Germany</option>
+                        </select>
+                        <select id="large" class="block w-full px-4 py-3 text-base text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <option selected>Choose a country</option>
+                            <option value="US">United States</option>
+                            <option value="CA">Canada</option>
+                            <option value="FR">France</option>
+                            <option value="DE">Germany</option>
+                        </select>
+                     </div>
+                        <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded whitespace-nowrap">
+                            Apply filter
+                        </button>
+                    </form>
+                </div>
+
+                <div id="tanah-rekomendasi" class="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+
+                    <div class="w-full rounded overflow-hidden shadow-lg">
+                        <div class="relative">
+                            <img class="w-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSJW9evu0DJujsURWumbiFnVUd0XuCLmfvwA&s" alt="Sunset in the mountains">
+                            <div class="absolute bottom-4 right-4 bg-white/90 rounded px-4 py-2">
+                                <span class="font-bold text-xl">Rp. 12 Juta </span>
+                            </div>
+                        </div>
+                        <div class="px-6 py-4 space-y-1 text-md">
+                          <div class="mb-3 flex items-start gap-2">
+                            <div>
+                                <div class="font-bold text-xl mb-2">Castaic Lake Dr, Castaic, CA 91310, Amerika Serikat</div>
+                                <span class="text-sm underline">Lihat di google maps</span>
+                            </div>
+                            <button class="p-2 border border-slate-400 rounded-full -mr-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">
+                                    <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z"/>
+                                  </svg>
+                            </button>
+                          </div>
+                          <div class="flex items-center justify-between">
+                            <p>Pesawahan</p>
+                            <p>24 x 24 m</p>
+                          </div>
+                          <div class="flex items-center justify-between">
+                            <p>Bisa angsur</p>
+                            <p>12 x</p>
+                          </div>
+                          <p>Publisher: <span>hello@gmail.com</span></p>
+                        </div>
+                        <div class="p-4">
+                            <button class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                Beli
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="w-full rounded overflow-hidden shadow-lg">
+                        <div class="relative">
+                            <img class="w-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSJW9evu0DJujsURWumbiFnVUd0XuCLmfvwA&s" alt="Sunset in the mountains">
+                            <div class="absolute bottom-4 right-4 bg-white/90 rounded px-4 py-2">
+                                <span class="font-bold text-xl">Rp. 12 Juta </span>
+                            </div>
+                        </div>
+                        <div class="px-6 py-4 space-y-1 text-md">
+                          <div class="mb-3 flex items-start gap-2">
+                            <div>
+                                <div class="font-bold text-xl mb-2">Castaic Lake Dr, Castaic, CA 91310, Amerika Serikat</div>
+                                <span class="text-sm underline">Lihat di google maps</span>
+                            </div>
+                            <button class="p-2 border border-slate-400 rounded-full -mr-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">
+                                    <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z"/>
+                                  </svg>
+                            </button>
+                          </div>
+                          <div class="flex items-center justify-between">
+                            <p>Pesawahan</p>
+                            <p>24 x 24 m</p>
+                          </div>
+                          <div class="flex items-center justify-between">
+                            <p>Bisa angsur</p>
+                            <p>12 x</p>
+                          </div>
+                          <p>Publisher: <span>hello@gmail.com</span></p>
+                        </div>
+                        <div class="p-4">
+                            <button class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                Beli
+                            </button>
+                        </div>
+                    </div>
+
+
+                    <div class="w-full rounded overflow-hidden shadow-lg">
+                        <div class="relative">
+                            <img class="w-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSJW9evu0DJujsURWumbiFnVUd0XuCLmfvwA&s" alt="Sunset in the mountains">
+                            <div class="absolute bottom-4 right-4 bg-white/90 rounded px-4 py-2">
+                                <span class="font-bold text-xl">Rp. 12 Juta </span>
+                            </div>
+                        </div>
+                        <div class="px-6 py-4 space-y-1 text-md">
+                          <div class="mb-3 flex items-start gap-2">
+                            <div>
+                                <div class="font-bold text-xl mb-2">Castaic Lake Dr, Castaic, CA 91310, Amerika Serikat</div>
+                                <span class="text-sm underline">Lihat di google maps</span>
+                            </div>
+                            <button class="p-2 border border-slate-400 rounded-full -mr-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">
+                                    <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z"/>
+                                  </svg>
+                            </button>
+                          </div>
+                          <div class="flex items-center justify-between">
+                            <p>Pesawahan</p>
+                            <p>24 x 24 m</p>
+                          </div>
+                          <div class="flex items-center justify-between">
+                            <p>Bisa angsur</p>
+                            <p>12 x</p>
+                          </div>
+                          <p>Publisher: <span>hello@gmail.com</span></p>
+                        </div>
+                        <div class="p-4">
+                            <button class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                Beli
+                            </button>
+                        </div>
+                    </div>
+
+
+                    <div class="w-full rounded overflow-hidden shadow-lg">
+                        <div class="relative">
+                            <img class="w-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSJW9evu0DJujsURWumbiFnVUd0XuCLmfvwA&s" alt="Sunset in the mountains">
+                            <div class="absolute bottom-4 right-4 bg-white/90 rounded px-4 py-2">
+                                <span class="font-bold text-xl">Rp. 12 Juta </span>
+                            </div>
+                        </div>
+                        <div class="px-6 py-4 space-y-1 text-md">
+                          <div class="mb-3 flex items-start gap-2">
+                            <div>
+                                <div class="font-bold text-xl mb-2">Castaic Lake Dr, Castaic, CA 91310, Amerika Serikat</div>
+                                <span class="text-sm underline">Lihat di google maps</span>
+                            </div>
+                            <button class="p-2 border border-slate-400 rounded-full -mr-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">
+                                    <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z"/>
+                                  </svg>
+                            </button>
+                          </div>
+                          <div class="flex items-center justify-between">
+                            <p>Pesawahan</p>
+                            <p>24 x 24 m</p>
+                          </div>
+                          <div class="flex items-center justify-between">
+                            <p>Bisa angsur</p>
+                            <p>12 x</p>
+                          </div>
+                          <p>Publisher: <span>hello@gmail.com</span></p>
+                        </div>
+                        <div class="p-4">
+                            <button class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                Beli
+                            </button>
+                        </div>
+                    </div>
+
+
+                    <div class="w-full rounded overflow-hidden shadow-lg">
+                        <div class="relative">
+                            <img class="w-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSJW9evu0DJujsURWumbiFnVUd0XuCLmfvwA&s" alt="Sunset in the mountains">
+                            <div class="absolute bottom-4 right-4 bg-white/90 rounded px-4 py-2">
+                                <span class="font-bold text-xl">Rp. 12 Juta </span>
+                            </div>
+                        </div>
+                        <div class="px-6 py-4 space-y-1 text-md">
+                          <div class="mb-3 flex items-start gap-2">
+                            <div>
+                                <div class="font-bold text-xl mb-2">Castaic Lake Dr, Castaic, CA 91310, Amerika Serikat</div>
+                                <span class="text-sm underline">Lihat di google maps</span>
+                            </div>
+                            <button class="p-2 border border-slate-400 rounded-full -mr-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">
+                                    <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z"/>
+                                  </svg>
+                            </button>
+                          </div>
+                          <div class="flex items-center justify-between">
+                            <p>Pesawahan</p>
+                            <p>24 x 24 m</p>
+                          </div>
+                          <div class="flex items-center justify-between">
+                            <p>Bisa angsur</p>
+                            <p>12 x</p>
+                          </div>
+                          <p>Publisher: <span>hello@gmail.com</span></p>
+                        </div>
+                        <div class="p-4">
+                            <button class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                Beli
+                            </button>
+                        </div>
+                    </div>
+
+
+                    <div class="w-full rounded overflow-hidden shadow-lg">
+                        <div class="relative">
+                            <img class="w-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSJW9evu0DJujsURWumbiFnVUd0XuCLmfvwA&s" alt="Sunset in the mountains">
+                            <div class="absolute bottom-4 right-4 bg-white/90 rounded px-4 py-2">
+                                <span class="font-bold text-xl">Rp. 12 Juta </span>
+                            </div>
+                        </div>
+                        <div class="px-6 py-4 space-y-1 text-md">
+                          <div class="mb-3 flex items-start gap-2">
+                            <div>
+                                <div class="font-bold text-xl mb-2">Castaic Lake Dr, Castaic, CA 91310, Amerika Serikat</div>
+                                <span class="text-sm underline">Lihat di google maps</span>
+                            </div>
+                            <button class="p-2 border border-slate-400 rounded-full -mr-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">
+                                    <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z"/>
+                                  </svg>
+                            </button>
+                          </div>
+                          <div class="flex items-center justify-between">
+                            <p>Pesawahan</p>
+                            <p>24 x 24 m</p>
+                          </div>
+                          <div class="flex items-center justify-between">
+                            <p>Bisa angsur</p>
+                            <p>12 x</p>
+                          </div>
+                          <p>Publisher: <span>hello@gmail.com</span></p>
+                        </div>
+                        <div class="p-4">
+                            <button class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                Beli
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="w-full rounded overflow-hidden shadow-lg">
+                        <div class="relative">
+                            <img class="w-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSJW9evu0DJujsURWumbiFnVUd0XuCLmfvwA&s" alt="Sunset in the mountains">
+                            <div class="absolute bottom-4 right-4 bg-white/90 rounded px-4 py-2">
+                                <span class="font-bold text-xl">Rp. 12 Juta </span>
+                            </div>
+                        </div>
+                        <div class="px-6 py-4 space-y-1 text-md">
+                          <div class="mb-3 flex items-start gap-2">
+                            <div>
+                                <div class="font-bold text-xl mb-2">Castaic Lake Dr, Castaic, CA 91310, Amerika Serikat</div>
+                                <span class="text-sm underline">Lihat di google maps</span>
+                            </div>
+                            <button class="p-2 border border-slate-400 rounded-full -mr-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">
+                                    <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z"/>
+                                  </svg>
+                            </button>
+                          </div>
+                          <div class="flex items-center justify-between">
+                            <p>Pesawahan</p>
+                            <p>24 x 24 m</p>
+                          </div>
+                          <div class="flex items-center justify-between">
+                            <p>Bisa angsur</p>
+                            <p>12 x</p>
+                          </div>
+                          <p>Publisher: <span>hello@gmail.com</span></p>
+                        </div>
+                        <div class="p-4">
+                            <button class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                Beli
+                            </button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </main>
+    
+        <footer class="bg-gray-900 pt-16 pb-20 px-8 box-border">
+            <div class="max-w-7xl mx-auto text-xs">
+                <div
+                    class="relative grid grid-cols-2 gap-8 lg:grid-cols-5 sm:grid-cols-4 pb-8 sm:pb-10 md:pb-12 lg:pb-14 text-white">
+                    <div class="mb-6">
+                        <h1 class="text-3xl font-bold text-white mb-2">BeliTanah</h1>
+                        <p class="mb-2 leading-6">Temukan Tanah Impianmu di BeliTanah.</p>
+                        
+                    </div>
+                    <div class="">
+                        <h1 class="font-bold mb-2 text-white">Explore</h1>
+                        <a class="block leading-6">List tanah</a>
+                        <a class="block leading-6">List Afiliator</a>
+                        <a class="block leading-6">Simulasi harga</a>
+                        <a href="./contact-us.html" class="block leading-6">Kontak</a>
+                        <a class="block leading-6">Jual tanah</a>
+                    </div>
+                    <div class="">
+                        <h1 class="font-bold mb-2 text-white">Visit</h1>
+                        <p class="leading-6">Karangbawang, Kawunganten <br /> Cilacap, Jawa Tengah <br /> Indonesia.</p>
+                    </div>
+                    <div>
+                        <h1 class="mb-2 font-bold text-white">New Business</h1>
+                        <p class="leading-6">fr089138@gmail.com</p>
+                        <p class="leading-6">+62 838-6788-6915</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
