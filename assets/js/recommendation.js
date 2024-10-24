@@ -1,10 +1,43 @@
 import { recommendationData } from './data.js';
 
-function main() {
-    const tanahRekomendasiContainer = document.getElementById("tanah-rekomendasi");
+const tanahRekomendasiContainer = document.getElementById("tanah-rekomendasi");
 
+// Function to load bookmarks from localStorage
+const loadBookmarks = () => {
+    const bookmarks = JSON.parse(localStorage.getItem('bookmarkedProperties')) || [];
+    return bookmarks;
+};
+
+// Function to save bookmarks to localStorage
+const saveBookmarks = (bookmarks) => {
+    localStorage.setItem('bookmarkedProperties', JSON.stringify(bookmarks));
+};
+
+// Function to toggle bookmark status
+const toggleBookmark = (id) => {
+    const bookmarks = loadBookmarks();
+    if (bookmarks.includes(id)) {
+        // Remove from bookmarks
+        const updatedBookmarks = bookmarks.filter(bookmarkId => bookmarkId !== id);
+        saveBookmarks(updatedBookmarks);
+    } else {
+        // Add to bookmarks
+        bookmarks.push(id);
+        saveBookmarks(bookmarks);
+    }
+    renderCards(); // Re-render cards to update bookmark status
+};
+
+// Function to check if a property is bookmarked
+const isBookmarked = (id) => {
+    const bookmarks = loadBookmarks();
+    return bookmarks.includes(id);
+};
+
+const renderCards = () => {
+    tanahRekomendasiContainer.innerHTML = ''; 
     // Iterate over each tanah item in recommendationData
-    recommendationData.forEach(tanah => {
+    recommendationData.forEach((tanah, index) => {
         // Create a card element
         const card = document.createElement('div');
         card.className = "w-full rounded overflow-hidden shadow-lg";
@@ -38,7 +71,7 @@ function main() {
             <div class="font-bold text-xl mb-2">${tanah.location.address}</div>
             <span class="text-sm underline"><a href="${tanah.location.coordinateGMapsUrl}" target="_blank">Lihat di google maps</a></span>
         </div>
-        <button class="p-2 border border-slate-400 rounded-full -mr-2">
+        <button data-id="${index}" class="bookmark-btn p-2 border border-slate-400 rounded-full -mr-2 ${isBookmarked(index) ? '!border-blue-400 !bg-slate-400 !text-white' : ''}">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">
                 <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z"/>
             </svg>
@@ -77,7 +110,18 @@ function main() {
 
         // Append the card to the container
         tanahRekomendasiContainer.appendChild(card);
+    })
+}
+
+function main() {
+    document.querySelectorAll('.bookmark-btn').forEach(button => {
+        button.addEventListener('click', (event) => {
+            const id = parseInt(event.currentTarget.getAttribute('data-id'));
+            toggleBookmark(id);
+        });
     });
 }
+
+renderCards()
 
 export default main
