@@ -1,0 +1,21 @@
+/* MODAL STYLES
+--------------------- */
+.custom-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 16px;
+    overflow: auto;
+  
+    &.open {
+      display: block;
+    }
+  
+    .custom-modal-content {
+      padding: 20px;
+      background-color: #fff;
+    }
+  }
+  

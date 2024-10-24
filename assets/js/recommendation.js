@@ -2,6 +2,8 @@ import { recommendationData } from './data.js';
 
 const tanahRekomendasiContainer = document.getElementById("tanah-rekomendasi");
 
+let negotiableItem = null
+
 // Function to load bookmarks from localStorage
 const loadBookmarks = () => {
     const bookmarks = JSON.parse(localStorage.getItem('bookmarkedProperties')) || [];
@@ -33,6 +35,44 @@ const isBookmarked = (id) => {
     const bookmarks = loadBookmarks();
     return bookmarks.includes(id);
 };
+
+/**
+ * Closes the currently open modal by removing the 'open' class and restores body scrolling.
+ */
+function closeModal() {
+    document.querySelector('.custom-modal.open')?.classList.remove('open');
+    document.body.classList.remove('modal-open');
+}
+
+function toggleFormAddArticle(id) {
+    document.getElementById(id)?.classList.add('open');
+    document.body.classList.add('modal-open');
+}
+
+
+// Function to dynamically populate the negotiable modal with item details
+function openNegotiableModal(item) {
+    const contentDiv = document.getElementById('negotiable-item-content');
+    contentDiv.innerHTML = `
+        <p><strong>Location:</strong> ${item.location.address}</p>
+        <p><strong>Price:</strong> Rp. ${item.price.toLocaleString()}</p>
+        <p><strong>Size:</strong> ${item.size.width} x ${item.size.height} m</p>
+        <p><strong>Installment:</strong> ${item.isInstallment ? 'Yes' : 'No'}</p>
+        <p><strong>Installment Months:</strong> ${item.monthInstallment}x</p>
+        <p><strong>Publisher:</strong> ${item.publisher.name} (${item.publisher.email})</p>
+    `;
+    
+    // Add negotiable item specific actions if needed (e.g., callback to negotiate)
+    document.getElementById('confirm-negotiation-btn').onclick = () => {
+        // You can add negotiation logic here
+        console.log('Negotiating with item:', item);
+        closeModal();
+    };
+
+    // Open the modal
+    toggleFormAddArticle('negosiasi-modal');
+}
+
 
 const renderCards = () => {
     tanahRekomendasiContainer.innerHTML = ''; 
@@ -105,6 +145,7 @@ const renderCards = () => {
         const button = document.createElement('button');
         button.className = "w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded";
         button.innerText = "Beli";
+        button.onclick = () => openNegotiableModal(tanah);
         buttonDiv.appendChild(button);
         card.appendChild(buttonDiv);
 
@@ -121,6 +162,7 @@ function main() {
         });
     });
 }
+
 
 renderCards()
 
