@@ -45,9 +45,15 @@
             </div>
         </div>
 
-        <main class="min-h-[80vh] my-24">
+          <!-- Main Content -->
+          <main class="min-h-[80vh] my-24">
             <div class="max-w-7xl mx-auto space-y-6">
-                <h1>PAGE_UNDER_DEVELOPMENT</h1>
+                <h1 class="text-2xl font-bold">Bookmark Data</h1>
+
+                <!-- Placeholder for displaying bookmarks -->
+                <div id="bookmark-list" class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+                    <!-- JavaScript will dynamically populate the bookmarks here -->
+                </div>
             </div>
         </main>
     
@@ -81,6 +87,41 @@
             </div>
         </footer>
     </div>
+
+        <script>
+        // Function to load bookmarks from localStorage
+        const loadBookmarks = () => {
+            const bookmarks = JSON.parse(localStorage.getItem('bookmarkedProperties')) || [];
+            return bookmarks;
+        };
+
+        // Function to render the bookmarks on the page
+        const renderBookmarks = () => {
+            const bookmarkList = document.getElementById('bookmark-list');
+            bookmarkList.innerHTML = '';  // Clear existing bookmarks
+
+            const bookmarks = loadBookmarks();
+
+            if (bookmarks.length === 0) {
+                bookmarkList.innerHTML = '<p class="text-gray-500">No bookmarks available.</p>';
+                return;
+            }
+
+            bookmarks.forEach(bookmark => {
+                console.log(bookmark)
+                const bookmarkCard = document.createElement('div');
+                bookmarkCard.classList.add('w-full', 'rounded', 'overflow-hidden', 'shadow-lg', 'p-4', 'bg-white', 'text-center');
+                bookmarkCard.innerHTML = `
+                    <h3 class="font-bold text-xl mb-2">${bookmark.title}</h3>
+                    <a href="${bookmark.link}" class="text-blue-500 hover:underline">Lihat detail</a>
+                `;
+                bookmarkList.appendChild(bookmarkCard);
+            });
+        };
+
+        // Render bookmarks on page load
+        document.addEventListener('DOMContentLoaded', renderBookmarks);
+    </script>
 </body>
 
 </html>
