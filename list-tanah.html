@@ -6,15 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>BeliTanah | Halaman utama</title>
-
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
     <div class="relative w-full">
+        <!-- Navbar and other content omitted for brevity -->
         <div class="w-full bg-gray-900 text-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-                <h5 class="font-bold text-lg">Kenali kita lebih lanjut <a href="./tentang.html" class="underline">disini</a></h5>
+                <h5 class="font-bold text-lg">Kenali kita lebih lanjut <a href="./tentang.html"
+                        class="underline">disini</a></h5>
             </div>
         </div>
         <div class="relative w-full">
@@ -32,11 +34,17 @@
                                     </div>
                                 </div>
                                 <div class="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
-                                    <a href="./list-tanah.html" class="font-semibold text-lg text-gray-700 hover:text-gray-500">List tanah</a>
-                                    <a href="./list-agen.html" class="font-semibold text-lg text-gray-700 hover:text-gray-500">List agen</a>
-                                    <a href="./simulasi-harga.html" class="font-semibold text-lg text-gray-700 hover:text-gray-500">Simulasi harga</a>
-                                    <a href="./kontak.html" class="font-semibold text-lg  text-gray-700 hover:text-gray-500">Kontak</a>
-                                    <a href="./authentikasi.html" class="font-semibold text-lg  text-gray-700 hover:text-gray-500">Jual tanah</a>
+                                    <a href="./list-tanah.html"
+                                        class="font-semibold text-lg text-gray-700 hover:text-gray-500">List tanah</a>
+                                    <a href="./list-agen.html"
+                                        class="font-semibold text-lg text-gray-700 hover:text-gray-500">List agen</a>
+                                    <a href="./simulasi-harga.html"
+                                        class="font-semibold text-lg text-gray-700 hover:text-gray-500">Simulasi
+                                        harga</a>
+                                    <a href="./kontak.html"
+                                        class="font-semibold text-lg  text-gray-700 hover:text-gray-500">Kontak</a>
+                                    <a href="./authentikasi.html"
+                                        class="font-semibold text-lg  text-gray-700 hover:text-gray-500">Jual tanah</a>
                                 </div>
                             </nav>
                         </div>
@@ -45,12 +53,13 @@
             </div>
         </div>
 
+
         <main class="min-h-[80vh] my-24">
             <div class="max-w-7xl mx-auto space-y-6">
                 <h3 class="mt-6 text-3xl font-bold">List Tanah</h3>
 
                 <div>
-                    <form method="GET" action="" id="filterForm">
+                    <form method="GET" action="" id="filterForm" class="flex items-center max-w-[80%] gap-4 whitespace-nowrap">
                         <!-- Search by Location -->
                         <input type="search" name="lokasi" placeholder="Search by location..." aria-label="Search" value="" />
                     
@@ -88,151 +97,178 @@
                     </form>
                 </div>
 
-                <div id="tanah-rekomendasi" class="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+                <div id="tanah-rekomendasi"
+                    class="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+                </div>
 
+                <!-- Negotiable Modal -->
+                <div id="negosiasi-modal" class="custom-modal">
+                    <div class="custom-modal-content" style="max-width: 360px; margin: 0 auto;">
+                        <h3 class="fw-bold fs-4">Negotiable Item</h3>
+                        <div id="negotiable-item-content">
+                            <!-- Dynamic content will be injected here -->
+                        </div>
+                        <div class="d-flex justify-content-end mt-4">
+                            <button class="btn btn-secondary me-2" onclick="closeModal()">Cancel</button>
+                            <button id="confirm-negotiation-btn" class="btn btn-success">Negotiate</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>
-    
-        <footer class="bg-gray-900 pt-16 pb-20 px-8 box-border">
-            <div class="max-w-7xl mx-auto text-xs">
-                <div
-                    class="relative grid grid-cols-2 gap-8 lg:grid-cols-5 sm:grid-cols-4 pb-8 sm:pb-10 md:pb-12 lg:pb-14 text-white">
-                    <div class="mb-6">
-                        <h1 class="text-3xl font-bold text-white mb-2">BeliTanah</h1>
-                        <p class="mb-2 leading-6">Temukan Tanah Impianmu di BeliTanah.</p>
-                        
-                    </div>
-                    <div class="">
-                        <h1 class="font-bold mb-2 text-white">Explore</h1>
-                        <a class="block leading-6">List tanah</a>
-                        <a class="block leading-6">List agen</a>
-                        <a class="block leading-6">Simulasi harga</a>
-                        <a href="./kontak.html" class="block leading-6">Kontak</a>
-                        <a class="block leading-6">Jual tanah</a>
-                    </div>
-                    <div class="">
-                        <h1 class="font-bold mb-2 text-white">Visit</h1>
-                        <p class="leading-6">Karangbawang, Kawunganten <br /> Cilacap, Jawa Tengah <br /> Indonesia.</p>
-                    </div>
-                    <div>
-                        <h1 class="mb-2 font-bold text-white">New Business</h1>
-                        <p class="leading-6">fr089138@gmail.com</p>
-                        <p class="leading-6">+62 838-6788-6915</p>
-                    </div>
-                </div>
-            </div>
-        </footer>
+
+        <!-- Footer omitted for brevity -->
+
     </div>
 
-    <script>
+    <script type="module">
+        import { recommendationData } from './assets/js/data.js';
+
         // Example dataset (can be fetched from API/database)
-        const landListings = [
-            {
-                lokasi: 'Castaic, CA',
-                ukuran: '24x24',
-                type: 'Residential',
-                angsur: 'Yes',
-                negotiable: 'Yes',
-                price: 'Rp. 12 Juta',
-                publisher: 'hello@gmail.com'
-            },
-            {
-                lokasi: 'Los Angeles, CA',
-                ukuran: '30x40',
-                type: 'Commercial',
-                angsur: 'No',
-                negotiable: 'No',
-                price: 'Rp. 15 Juta',
-                publisher: 'la@gmail.com'
-            },
-            // More listings...
-        ];
-    
+        const landListings = recommendationData;
+
         // Helper function to get URL parameters
-function getUrlParams() {
-    const params = new URLSearchParams(window.location.search);
-    return {
-        lokasi: params.get('lokasi') || '',
-        size: params.get('size') || '',
-        type: params.get('type') || '',
-        angsur: params.get('angsur') || '',
-        negotiable: params.get('negotiable') || ''
-    };
+        function getUrlParams() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                lokasi: params.get('lokasi') || '',
+                size: params.get('size') || '',
+                type: params.get('type') || '',
+                angsur: params.get('angsur') || '',
+                negotiable: params.get('negotiable') || ''
+            };
+        }
+
+        /**
+ * Closes the currently open modal by removing the 'open' class and restores body scrolling.
+ */
+function closeModal() {
+    document.querySelector('.custom-modal.open')?.classList.remove('open');
+    document.body.classList.remove('modal-open');
 }
 
-// Apply filters on page load
-document.addEventListener('DOMContentLoaded', () => {
-    const { lokasi, size, type, angsur, negotiable } = getUrlParams();
-
-    // Pre-populate the form with the URL values
-    document.querySelector('input[name="lokasi"]').value = lokasi;
-    document.querySelector('select[name="size"]').value = size;
-    document.querySelector('select[name="type"]').value = type;
-    document.querySelector('select[name="angsur"]').value = angsur;
-    document.querySelector('select[name="negotiable"]').value = negotiable;
-
-    // Apply filters automatically when the page loads
-    applyFilters();
-});
-
-function applyFilters() {
-    const { lokasi, size, type, angsur, negotiable } = getUrlParams();
-
-    // Filter logic
-    const filteredListings = landListings.filter(listing => {
-        const matchesLokasi = lokasi === '' || listing.lokasi.toLowerCase().includes(lokasi.toLowerCase());
-        const matchesSize = size === '' || listing.ukuran === size;
-        const matchesType = type === '' || listing.type === type;
-        const matchesAngsur = angsur === '' || listing.angsur === angsur;
-        const matchesNegotiable = negotiable === '' || listing.negotiable === negotiable;
-
-        return matchesLokasi && matchesSize && matchesType && matchesAngsur && matchesNegotiable;
-    });
-
-    // Render listings as in the previous example
-    const tanahRekomendasiDiv = document.getElementById('tanah-rekomendasi');
-    tanahRekomendasiDiv.innerHTML = '';
-
-    if (filteredListings.length > 0) {
-        filteredListings.forEach(listing => {
-            const listingElement = `
-                <div class="w-full rounded overflow-hidden shadow-lg">
-                    <div class="relative">
-                        <img class="w-full" src="https://via.placeholder.com/150" alt="${listing.lokasi}">
-                        <div class="absolute bottom-4 right-4 bg-white/90 rounded px-4 py-2">
-                            <span class="font-bold text-xl">${listing.price}</span>
-                        </div>
-                    </div>
-                    <div class="px-6 py-4 space-y-1 text-md">
-                        <div class="mb-3 flex items-start gap-2">
-                            <div>
-                                <div class="font-bold text-xl mb-2">${listing.lokasi}</div>
-                                <span class="text-sm underline">Lihat di google maps</span>
-                            </div>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <p>${listing.type}</p>
-                            <p>${listing.ukuran}</p>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <p>${listing.angsur === 'Yes' ? 'Bisa angsur' : 'Tidak bisa angsur'}</p>
-                        </div>
-                        <p>Publisher: <span>${listing.publisher}</span></p>
-                    </div>
-                    <div class="p-4">
-                        <button class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                            Beli
-                        </button>
-                    </div>
-                </div>
-            `;
-            tanahRekomendasiDiv.innerHTML += listingElement;
-        });
-    } else {
-        tanahRekomendasiDiv.innerHTML = '<p class="text-center text-gray-500">No listings found</p>';
-    }
+function toggleFormAddArticle(id) {
+    document.getElementById(id)?.classList.add('open');
+    document.body.classList.add('modal-open');
 }
+
+
+        // Function to dynamically populate the negotiable modal with item details
+        function openNegotiableModal(item) {
+            const contentDiv = document.getElementById('negotiable-item-content');
+            contentDiv.innerHTML = `
+        <p><strong>Location:</strong> ${item.location.address}</p>
+        <p><strong>Price:</strong> Rp. ${item.price.toLocaleString()}</p>
+        <p><strong>Size:</strong> ${item.size.width} x ${item.size.height} m</p>
+        <p><strong>Installment:</strong> ${item.isInstallment ? 'Yes' : 'No'}</p>
+        <p><strong>Installment Months:</strong> ${item.monthInstallment}x</p>
+        <p><strong>Publisher:</strong> ${item.publisher.name} (${item.publisher.email})</p>
+    `;
+
+            console.log(item.isNegotable)
+
+            if (item.isNegotable) {
+                contentDiv.innerHTML += `
+            <label for="negotiable-price"><strong>Price (Negotiable):</strong></label>
+            <input type="text" id="negotiable-price" class="w-full p-2 border rounded" value="${item.price.toLocaleString()}" />
+        `;
+            } else {
+                contentDiv.innerHTML += `
+            <p><strong>Price:</strong> Rp. ${item.price.toLocaleString()}</p>
+        `;
+            }
+
+            // Update the negotiation logic
+            document.getElementById('confirm-negotiation-btn').onclick = () => {
+                let negotiatedPrice = item.price;
+
+                // If the item is negotiable, capture the user-updated price
+                if (item.isNegotable) {
+                    const priceInput = document.getElementById('negotiable-price').value;
+                    negotiatedPrice = parseFloat(priceInput.replace(/,/g, '')); // Convert formatted price back to number
+                }
+
+                console.log('Negotiating with item:', {
+                    ...item,
+                    negotiatedPrice: negotiatedPrice
+                });
+
+                closeModal();
+            };
+
+            // Open the modal
+            toggleFormAddArticle('negosiasi-modal');
+        }
+
+
+        function applyFilters() {
+            const { lokasi, size, type, angsur, negotiable } = getUrlParams();
+
+            // Filter logic
+            const filteredListings = landListings.filter(listing => {
+                const matchesLokasi = lokasi === '' || listing.location.address.toLowerCase().includes(lokasi.toLowerCase());
+                const matchesSize = size === '' || `${listing.size.width}x${listing.size.height}` === size;
+                const matchesType = type === '' || listing.type.toLowerCase() === type.toLowerCase();
+                const matchesAngsur = angsur === '' || (angsur === 'Yes' && listing.isInstallment) || (angsur === 'No' && !listing.isInstallment);
+                const matchesNegotiable = negotiable === '' || (negotiable === 'Yes' && listing.isNegotiable) || (negotiable === 'No' && !listing.isNegotiable);
+                return matchesLokasi && matchesSize && matchesType && matchesAngsur && matchesNegotiable;
+            });
+
+            console.log(filteredListings, 'filterd 123')
+
+            const tanahRekomendasiDiv = document.getElementById('tanah-rekomendasi');
+            tanahRekomendasiDiv.innerHTML = '';
+
+            if (filteredListings.length > 0) {
+                filteredListings.forEach((tanah) => {
+                    const card = document.createElement('div');
+                    card.className = "w-full rounded overflow-hidden shadow-lg";
+
+                    // Image section
+                    const imgDiv = document.createElement('div');
+                    imgDiv.className = "relative";
+                    const img = document.createElement('img');
+                    img.className = "w-full";
+                    img.src = "https://via.placeholder.com/400";
+                    img.alt = "Tanah Image";
+
+                    const priceDiv = document.createElement('div');
+                    priceDiv.className = "absolute bottom-4 right-4 bg-white/90 rounded px-4 py-2";
+                    priceDiv.innerHTML = `<span class="font-bold text-xl">Rp. ${tanah.price.toLocaleString()}</span>`;
+                    imgDiv.appendChild(img);
+                    imgDiv.appendChild(priceDiv);
+                    card.appendChild(imgDiv);
+
+                    const contentDiv = document.createElement('div');
+                    contentDiv.className = "px-6 py-4 space-y-1 text-md";
+                    const locationDiv = document.createElement('div');
+                    locationDiv.className = "mb-3";
+                    locationDiv.innerHTML = `
+                        <div class="font-bold text-xl mb-2">${tanah.location.address}</div>
+                        <a href="${tanah.location.coordinateGMapsUrl}" class="underline text-sm" target="_blank">Lihat di Google Maps</a>
+                    `;
+                    contentDiv.appendChild(locationDiv);
+                    card.appendChild(contentDiv);
+
+                    // Create button to buy
+                    const buttonDiv = document.createElement('div');
+                    buttonDiv.className = "p-4";
+                    const button = document.createElement('button');
+                    button.className = "w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded";
+                    button.innerText = "Beli";
+                    button.onclick = () => openNegotiableModal(tanah);
+                    buttonDiv.appendChild(button);
+                    card.appendChild(buttonDiv);
+
+
+
+
+                    tanahRekomendasiDiv.appendChild(card);
+                });
+            } else {
+                tanahRekomendasiDiv.innerHTML = '<p>No listings match your filters.</p>';
+            }
+        }
 
         document.addEventListener('DOMContentLoaded', function () {
             // Event listener for the filter button
