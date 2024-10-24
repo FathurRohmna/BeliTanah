@@ -2,8 +2,6 @@ import { recommendationData } from './data.js';
 
 const tanahRekomendasiContainer = document.getElementById("tanah-rekomendasi");
 
-let negotiableItem = null
-
 // Function to load bookmarks from localStorage
 const loadBookmarks = () => {
     const bookmarks = JSON.parse(localStorage.getItem('bookmarkedProperties')) || [];
@@ -61,11 +59,35 @@ function openNegotiableModal(item) {
         <p><strong>Installment Months:</strong> ${item.monthInstallment}x</p>
         <p><strong>Publisher:</strong> ${item.publisher.name} (${item.publisher.email})</p>
     `;
+
+    console.log(item.isNegotable)
+
+    if (item.isNegotable) {
+        contentDiv.innerHTML += `
+            <label for="negotiable-price"><strong>Price (Negotiable):</strong></label>
+            <input type="text" id="negotiable-price" class="w-full p-2 border rounded" value="${item.price.toLocaleString()}" />
+        `;
+    } else {
+        contentDiv.innerHTML += `
+            <p><strong>Price:</strong> Rp. ${item.price.toLocaleString()}</p>
+        `;
+    }
     
-    // Add negotiable item specific actions if needed (e.g., callback to negotiate)
-    document.getElementById('confirm-negotiation-btn').onclick = () => {
-        // You can add negotiation logic here
-        console.log('Negotiating with item:', item);
+      // Update the negotiation logic
+      document.getElementById('confirm-negotiation-btn').onclick = () => {
+        let negotiatedPrice = item.price;
+
+        // If the item is negotiable, capture the user-updated price
+        if (item.isNegotable) {
+            const priceInput = document.getElementById('negotiable-price').value;
+            negotiatedPrice = parseFloat(priceInput.replace(/,/g, '')); // Convert formatted price back to number
+        }
+
+        console.log('Negotiating with item:', {
+            ...item,
+            negotiatedPrice: negotiatedPrice
+        });
+
         closeModal();
     };
 
@@ -93,7 +115,7 @@ const renderCards = () => {
 
         const priceDiv = document.createElement('div');
         priceDiv.className = "absolute bottom-4 right-4 bg-white/90 rounded px-4 py-2";
-        priceDiv.innerHTML = `<span class="font-bold text-xl">Rp. ${tanah.price.toLocaleString()}</span>`;
+        priceDiv.innerHTML = `<span class="font-bold text-xl">Rp. ${tanah.price.toLocaleString()}${tanah.isNegotable && 'IsNegotable'}</span>`;
 
         imgDiv.appendChild(img);
         imgDiv.appendChild(priceDiv);
@@ -151,19 +173,20 @@ const renderCards = () => {
 
         // Append the card to the container
         tanahRekomendasiContainer.appendChild(card);
-    })
-}
+    });
 
-function main() {
+    // After rendering, attach event listeners for bookmark buttons
+    attachBookmarkEventListeners();
+};
+
+// Function to attach event listeners for bookmark buttons
+const attachBookmarkEventListeners = () => {
     document.querySelectorAll('.bookmark-btn').forEach(button => {
         button.addEventListener('click', (event) => {
             const id = parseInt(event.currentTarget.getAttribute('data-id'));
             toggleBookmark(id);
         });
     });
-}
+};
 
-
-renderCards()
-
-export default main
+renderCards(); // Initial render
