@@ -30,8 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Fetch the user data
         $user = $result->fetch_assoc();
 
-        // Check if the password matches (in a real application, you'd hash the password)
-        if ($user['password'] === $password) {
+        if (password_verify($password, $user['password'])) {
             // Set session variable for logged-in user
             $_SESSION['user_email'] = $email;
 
