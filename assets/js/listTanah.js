@@ -1,5 +1,5 @@
 import { createBeliTanahTemplate } from './constants.js';
-import { recommendationData } from './data.js';
+import { listTanah } from './data.js';
 
 const tanahRekomendasiContainer = document.getElementById('tanah-rekomendasi');
 
@@ -49,7 +49,7 @@ function closeModal() {
   document.body.classList.remove('modal-open');
 }
 
-function toggleFormAddArticle(id) {
+function toggleOpenModal(id) {
   document.getElementById(id)?.classList.add('open');
   document.body.classList.add('modal-open');
 }
@@ -123,7 +123,7 @@ function openNegotiableModal(item) {
   };
 
   // Open the modal
-  toggleFormAddArticle('negosiasi-modal');
+  toggleOpenModal('negosiasi-modal');
 }
 
 // Helper function to get URL parameters
@@ -140,7 +140,7 @@ function getUrlParams() {
 const renderCards = () => {
   const { lokasi, size, angsur, negotiable } = getUrlParams();
 
-  const filteredListings = recommendationData.filter((listing) => {
+  const filteredListings = listTanah.filter((listing) => {
     // Corrected fields and conditions based on provided data structure
     const matchesLokasi =
       !lokasi ||
@@ -178,8 +178,7 @@ const renderCards = () => {
 
     const img = document.createElement('img');
     img.className = 'w-full';
-    img.src =
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSJW9evu0DJujsURWumbiFnVUd0XuCLmfvwA&s'; // Placeholder image
+    img.src = tanah.imgUrl; // Placeholder image
     img.alt = 'Tanah Image';
 
     const priceDiv = document.createElement('div');
@@ -276,7 +275,7 @@ const attachBookmarkEventListeners = () => {
   document.querySelectorAll('.bookmark-btn').forEach((button) => {
     button.addEventListener('click', (event) => {
       const id = parseInt(event.currentTarget.getAttribute('data-id'));
-      const item = recommendationData.find((tanah) => tanah.id === id);
+      const item = listTanah.find((tanah) => tanah.id === id);
       toggleBookmark({
         ...item,
         id,

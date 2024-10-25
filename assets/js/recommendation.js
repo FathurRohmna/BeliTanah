@@ -49,7 +49,7 @@ function closeModal() {
   document.body.classList.remove('modal-open');
 }
 
-function toggleFormAddArticle(id) {
+function toggleOpenModal(id) {
   document.getElementById(id)?.classList.add('open');
   document.body.classList.add('modal-open');
 }
@@ -123,7 +123,7 @@ function openNegotiableModal(item) {
   };
 
   // Open the modal
-  toggleFormAddArticle('negosiasi-modal');
+  toggleOpenModal('negosiasi-modal');
 }
 
 const renderCards = () => {
@@ -141,8 +141,7 @@ const renderCards = () => {
 
     const img = document.createElement('img');
     img.className = 'w-full';
-    img.src =
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSJW9evu0DJujsURWumbiFnVUd0XuCLmfvwA&s'; // Placeholder image
+    img.src = tanah.imgUrl; // Placeholder image
     img.alt = 'Tanah Image';
 
     const priceDiv = document.createElement('div');
