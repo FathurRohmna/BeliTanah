@@ -108,7 +108,7 @@ function openNegotiableModal(item) {
           : undefined,
     });
     console.log(message, 'message');
-    const whatsappLink = `https://api.whatsapp.com/send/?phone=${6283867886915}&text=${encodeURIComponent(
+    const whatsappLink = `https://api.whatsapp.com/send/?phone=${item.publisher.phoneNumber}&text=${encodeURIComponent(
       message
     )}&app_absent=0`;
 
