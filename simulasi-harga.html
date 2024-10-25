@@ -1,221 +1,486 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>BeliTanah | Simulasi harga</title>
+    <title>BeliTanah | Bookmarks</title>
 
-    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
-</head>
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
 
-<body>
+  <body>
     <div class="relative w-full">
-        <div class="w-full bg-gray-900 text-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-                <h5 class="font-bold text-lg">Kenali kita lebih lanjut <a href="./tentang.html"
-                        class="underline">disini</a></h5>
-            </div>
+      <div class="w-full bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+          <h5 class="font-bold text-lg">
+            Kenali kami lebih dekat dan temukan apa yang bisa kami tawarkan!
+            <a href="./tentang.html" class="underline">di sini</a>
+          </h5>
         </div>
-        <div class="relative w-full">
-            <div class="absolute top-0 right-0 left-0 bg-white/70">
-                <div class="max-w-7xl mx-auto">
-                    <div class="relative z-10 lg:pb-8 pb-0 bg-transparent">
-                        <div class="relative pt-6 px-4 sm:px-6 lg:px-8">
-                            <nav class="relative flex items-center justify-between sm:h-10">
-                                <div class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
-                                    <div class="flex items-center justify-between w-full md:w-auto">
-                                        <a href="./index.html" class="ml-2">
-                                            <span class="sr-only">BeliTanah</span>
-                                            <img class="h-6 w-auto" src="/assets/images/beli-tanah.png" />
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
-                                    <a href="./list-tanah.html"
-                                        class="font-semibold text-lg text-gray-700 hover:text-gray-500">List tanah</a>
-                                    <a href="./list-agen.html"
-                                        class="font-semibold text-lg text-gray-700 hover:text-gray-500">List agen</a>
-                                    <a href="./simulasi-harga.html"
-                                        class="font-semibold text-lg text-gray-700 hover:text-gray-500">Simulasi
-                                        harga</a>
-                                    <a href="./kontak.html"
-                                        class="font-semibold text-lg  text-gray-700 hover:text-gray-500">Kontak</a>
-                                    <a href="./authentikasi.html"
-                                        class="font-semibold text-lg  text-gray-700 hover:text-gray-500">Jual tanah</a>
-                                </div>
-                            </nav>
-                        </div>
+      </div>
+      <div class="relative w-full">
+        <div class="absolute top-0 right-0 left-0 bg-white md:bg-white/70">
+          <div class="max-w-7xl mx-auto">
+            <div class="relative z-10 lg:pb-8 pb-0 bg-white lg:bg-transparent">
+              <div class="relative py-3 md:pb-0 md:pt-6 px-4 sm:px-6 lg:px-8">
+                <nav class="relative flex items-center justify-between sm:h-10">
+                  <div
+                    class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0"
+                  >
+                    <div
+                      class="flex items-center justify-between w-full md:w-auto"
+                    >
+                      <a href="./index.html" class="ml-2">
+                        <span class="sr-only">BeliTanah</span>
+                        <img
+                          class="h-6 w-auto"
+                          src="/assets/images/beli-tanah.png"
+                        />
+                      </a>
                     </div>
+                  </div>
+                  <!-- Hamburger Button -->
+                  <div class="md:hidden">
+                    <button
+                      id="mobile-menu-button"
+                      class="flex items-center p-2 text-gray-700 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500"
+                    >
+                      <span class="sr-only">Open menu</span>
+                      <svg
+                        class="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M4 6h16M4 12h16m-7 6h7"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+                  <!-- Desktop Menu -->
+                  <div
+                    class="hidden md:block md:ml-10 md:pr-4 md:space-x-8"
+                    id="desktop-menu"
+                  >
+                    <a
+                      href="./list-tanah.html"
+                      class="font-semibold text-lg text-gray-700 hover:text-gray-500"
+                      >List tanah</a
+                    >
+                    <a
+                      href="./list-agen.html"
+                      class="font-semibold text-lg text-gray-700 hover:text-gray-500"
+                      >List agen</a
+                    >
+                    <a
+                      href="./simulasi-harga.html"
+                      class="font-semibold text-lg text-gray-700 hover:text-gray-500"
+                      >Bookmarks</a
+                    >
+                    <a
+                      href="./kontak.html"
+                      class="font-semibold text-lg text-gray-700 hover:text-gray-500"
+                      >Kontak</a
+                    >
+                    <a
+                      href="./authentikasi.html"
+                      class="font-semibold text-lg text-gray-700 hover:text-gray-500"
+                      >Jual tanah</a
+                    >
+                  </div>
+                </nav>
+                <!-- Mobile Menu -->
+                <div id="mobile-menu" class="hidden md:hidden mt-4">
+                  <div class="flex flex-col space-y-2">
+                    <a
+                      href="./list-tanah.html"
+                      class="block font-semibold text-lg text-gray-700 hover:text-gray-500"
+                      >List tanah</a
+                    >
+                    <a
+                      href="./list-agen.html"
+                      class="block font-semibold text-lg text-gray-700 hover:text-gray-500"
+                      >List agen</a
+                    >
+                    <a
+                      href="./simulasi-harga.html"
+                      class="block font-semibold text-lg text-gray-700 hover:text-gray-500"
+                      >Bookmarks</a
+                    >
+                    <a
+                      href="./kontak.html"
+                      class="block font-semibold text-lg text-gray-700 hover:text-gray-500"
+                      >Kontak</a
+                    >
+                    <a
+                      href="./authentikasi.html"
+                      class="block font-semibold text-lg text-gray-700 hover:text-gray-500"
+                      >Jual tanah</a
+                    >
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
 
-        <!-- Main Content -->
-        <main class="min-h-[80vh] my-24">
-            <div class="max-w-7xl mx-auto space-y-6">
-                <h1 class="text-2xl font-bold">Bookmark Data</h1>
+      <!-- Main Content -->
+      <main class="min-h-[80vh] my-24">
+        <div class="max-w-7xl mx-auto space-y-6">
+          <h1 class="text-2xl font-bold">Bookmark Data</h1>
 
-                <!-- Placeholder for displaying bookmarks -->
-                <div id="bookmark-list" class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
-                    <!-- JavaScript will dynamically populate the bookmarks here -->
-                </div>
+          <!-- Placeholder for displaying bookmarks -->
+          <div
+            id="bookmark-list"
+            class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6"
+          >
+            <!-- JavaScript will dynamically populate the bookmarks here -->
+          </div>
+        </div>
+      </main>
+
+      <!-- Negotiable Modal -->
+      <div id="negosiasi-modal" class="custom-modal">
+        <div
+          class="custom-modal-content"
+          style="max-width: 360px; margin: 0 auto"
+        >
+          <h3 class="text-lg font-semibold mb-4">Negotiable Item</h3>
+          <div id="negotiable-item-content" class="space-y-4">
+            <!-- Dynamic content will be injected here -->
+          </div>
+          <div class="flex justify-end mt-4">
+            <button
+              id="cancel-negotiation-btn"
+              class="bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded mr-2"
+              onclick="closeModal()"
+            >
+              Cancel
+            </button>
+            <button
+              id="confirm-negotiation-btn"
+              class="bg-green-500 text-white font-semibold py-2 px-4 rounded"
+            >
+              Beli
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <footer class="bg-gray-900 pt-16 pb-20 px-8 box-border">
+        <div class="max-w-7xl mx-auto text-xs">
+          <div
+            class="relative grid grid-cols-2 gap-8 lg:grid-cols-5 sm:grid-cols-4 pb-8 sm:pb-10 md:pb-12 lg:pb-14 text-white"
+          >
+            <div class="mb-6">
+              <h1 class="text-3xl font-bold text-white mb-2">BeliTanah</h1>
+              <p class="mb-2 leading-6">Temukan Tanah Impianmu di BeliTanah.</p>
             </div>
-        </main>
-
-        <footer class="bg-gray-900 pt-16 pb-20 px-8 box-border">
-            <div class="max-w-7xl mx-auto text-xs">
-                <div
-                    class="relative grid grid-cols-2 gap-8 lg:grid-cols-5 sm:grid-cols-4 pb-8 sm:pb-10 md:pb-12 lg:pb-14 text-white">
-                    <div class="mb-6">
-                        <h1 class="text-3xl font-bold text-white mb-2">BeliTanah</h1>
-                        <p class="mb-2 leading-6">Temukan Tanah Impianmu di BeliTanah.</p>
-
-                    </div>
-                    <div class="">
-                        <h1 class="font-bold mb-2 text-white">Explore</h1>
-                        <a class="block leading-6">List tanah</a>
-                        <a class="block leading-6">List agen</a>
-                        <a class="block leading-6">Simulasi harga</a>
-                        <a href="./kontak.html" class="block leading-6">Kontak</a>
-                        <a class="block leading-6">Jual tanah</a>
-                    </div>
-                    <div class="">
-                        <h1 class="font-bold mb-2 text-white">Visit</h1>
-                        <p class="leading-6">Karangbawang, Kawunganten <br /> Cilacap, Jawa Tengah <br /> Indonesia.</p>
-                    </div>
-                    <div>
-                        <h1 class="mb-2 font-bold text-white">New Business</h1>
-                        <p class="leading-6">fr089138@gmail.com</p>
-                        <p class="leading-6">+62 838-6788-6915</p>
-                    </div>
-                </div>
+            <div class="">
+                <h1 class="font-bold mb-2 text-white">Explore</h1>
+                <a href="./list-tanah.html" class="block leading-6">List tanah</a>
+                <a href="./list-agen.html" class="block leading-6">List agen</a>
+                <a href="./simulasi-harga.html" class="block leading-6">Bookmarks</a>
+                <a href="./kontak.html" class="block leading-6">Kontak</a>
+                <a href="./authentikasi.html" class="block leading-6">Jual tanah</a>
+              </div>
+            <div class="">
+              <h1 class="font-bold mb-2 text-white">Visit</h1>
+              <p class="leading-6">
+                Cilacap, Jawa Tengah <br />
+                Indonesia.
+              </p>
             </div>
-        </footer>
+            <div>
+              <h1 class="mb-2 font-bold text-white">New Business</h1>
+              <p class="leading-6">fr089138@gmail.com</p>
+              <p class="leading-6">+62 838-6788-6915</p>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
 
     <script>
-        // Function to load bookmarks from localStorage
-        const loadBookmarks = () => {
-            const bookmarks = JSON.parse(localStorage.getItem('bookmarkedProperties')) || [];
-            return bookmarks;
+      // Function to load bookmarks from localStorage
+      const loadBookmarks = () => {
+        const bookmarks =
+          JSON.parse(localStorage.getItem('bookmarkedProperties')) || [];
+        return bookmarks;
+      };
+
+      // Function to save bookmarks to localStorage
+      const saveBookmarks = (bookmarks) => {
+        localStorage.setItem('bookmarkedProperties', JSON.stringify(bookmarks));
+      };
+
+      // Function to toggle bookmark status
+      const toggleBookmark = (item) => {
+        const bookmarks = loadBookmarks();
+        const isAlreadyBookmarked = bookmarks.some(
+          (bookmarkedItem) => bookmarkedItem.id === item.id
+        );
+
+        if (isAlreadyBookmarked) {
+          // Remove from bookmarks
+          const updatedBookmarks = bookmarks.filter(
+            (bookmarkedItem) => bookmarkedItem.id !== item.id
+          );
+          saveBookmarks(updatedBookmarks);
+        } else {
+          // Add to bookmarks
+          bookmarks.push(item); // Save the entire item object
+          saveBookmarks(bookmarks);
+        }
+        renderBookmarks(); // Re-render cards to update bookmark status
+      };
+
+      // Function to check if a property is bookmarked
+      const isBookmarked = (id) => {
+        const bookmarks = loadBookmarks();
+        return bookmarks.some((bookmarkedItem) => bookmarkedItem.id === id);
+      };
+      /**
+       * Closes the currently open modal by removing the 'open' class and restores body scrolling.
+       */
+      function closeModal() {
+        document.querySelector('.custom-modal.open')?.classList.remove('open');
+        document.body.classList.remove('modal-open');
+      }
+
+      function toggleFormAddArticle(id) {
+        document.getElementById(id)?.classList.add('open');
+        document.body.classList.add('modal-open');
+      }
+
+      // Function to dynamically populate the negotiable modal with item details
+      function openNegotiableModal(item) {
+        const contentDiv = document.getElementById('negotiable-item-content');
+        contentDiv.innerHTML = `
+      <div class="bg-white border border-gray-300 shadow-lg rounded-lg p-4">
+        <p class="font-semibold"><strong>Location:</strong> ${
+          item.location.address
+        }</p>
+        <p class="font-semibold"><strong>Price:</strong> Rp. ${item.price}</p>
+        <p class="font-semibold"><strong>Size:</strong> ${item.size.width} x ${
+          item.size.height
+        } m</p>
+        <p class="font-semibold"><strong>Installment:</strong> ${
+          item.isInstallment ? 'Yes' : 'No'
+        }</p>
+        <p class="font-semibold"><strong>Installment Months:</strong> ${
+          item.monthInstallment
+        }x</p>
+        <p class="font-semibold"><strong>Publisher:</strong> ${
+          item.publisher.name
+        } (${item.publisher.email})</p>
+      </div>
+    `;
+
+        if (item.isNegotable) {
+          contentDiv.innerHTML += `
+            <label for="negotiable-price"><strong>Price (Negotiable):</strong></label>
+            <input type="text" id="negotiable-price" class="w-full p-2 border rounded" value="${item.price}" />
+        `;
+        } else {
+          contentDiv.innerHTML += `
+            <p><strong>Price:</strong> Rp. ${item.price}</p>
+        `;
+        }
+
+        // Update the negotiation logic
+        document.getElementById('confirm-negotiation-btn').onclick = () => {
+          let negotiatedPrice = item.price;
+
+          // If the item is negotiable, capture the user-updated price
+          if (item.isNegotable) {
+            const priceInput =
+              document.getElementById('negotiable-price').value;
+            negotiatedPrice = parseFloat(priceInput.replace(/,/g, '')); // Convert formatted price back to number
+          }
+          const message = createBeliTanahTemplate({
+            ...item,
+            address: item.location.address,
+            coordinateGMapsUrl: item.location.coordinateGMapsUrl,
+            negotiablePrice:
+              item.isNegotable && item.price !== negotiatedPrice
+                ? negotiatedPrice
+                : undefined,
+          });
+          console.log(message, 'message');
+          const whatsappLink = `https://api.whatsapp.com/send/?phone=${6283867886915}&text=${encodeURIComponent(
+            message
+          )}&app_absent=0`;
+
+          window.open(whatsappLink, '_blank');
+
+          closeModal();
         };
 
-
-        // Function to toggle bookmark status
-        const toggleBookmark = (item) => {
-            const bookmarks = loadBookmarks();
-            const isAlreadyBookmarked = bookmarks.some(bookmarkedItem => bookmarkedItem.id === item.id);
-
-            if (isAlreadyBookmarked) {
-                // Remove from bookmarks
-                const updatedBookmarks = bookmarks.filter(bookmarkedItem => bookmarkedItem.id !== item.id);
-                saveBookmarks(updatedBookmarks);
-            } else {
-                // Add to bookmarks
-                bookmarks.push(item); // Save the entire item object
-                saveBookmarks(bookmarks);
-            }
-            renderCards(); // Re-render cards to update bookmark status
+        // Update the negotiation logic
+        document.getElementById('cancel-negotiation-btn').onclick = () => {
+          closeModal();
         };
 
-        // Function to check if a property is bookmarked
-        const isBookmarked = (id) => {
-            const bookmarks = loadBookmarks();
-            return bookmarks.some(bookmarkedItem => bookmarkedItem.id === id);
-        };
+        // Open the modal
+        toggleFormAddArticle('negosiasi-modal');
+      }
 
-        // Function to render the bookmarks on the page
-        const renderBookmarks = () => {
-            const bookmarkList = document.getElementById('bookmark-list');
-            bookmarkList.innerHTML = '';  // Clear existing bookmarks
+      // Function to render the bookmarks on the page
+      const renderBookmarks = () => {
+        const bookmarkList = document.getElementById('bookmark-list');
+        bookmarkList.innerHTML = ''; // Clear existing bookmarks
 
-            const bookmarks = loadBookmarks();
+        const bookmarks = loadBookmarks();
 
-            if (bookmarks.length === 0) {
-                bookmarkList.innerHTML = '<p class="text-gray-500">No bookmarks available.</p>';
-                return;
-            }
+        console.log(bookmarks, 'bookmaks');
 
-            bookmarks.forEach((tanah, index) => {
-                const card = document.createElement('div');
-                card.className = "w-full rounded overflow-hidden shadow-lg";
+        if (bookmarks.length === 0) {
+          bookmarkList.innerHTML =
+            '<p class="text-gray-500">No bookmarks available.</p>';
+          return;
+        }
 
-                // Create the image section (use a placeholder image or dynamic image based on your needs)
-                const imgDiv = document.createElement('div');
-                imgDiv.className = "relative";
+        bookmarks.forEach((tanah) => {
+          const card = document.createElement('div');
+          card.className = 'w-full rounded overflow-hidden shadow-lg';
 
-                const img = document.createElement('img');
-                img.className = "w-full";
-                img.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSJW9evu0DJujsURWumbiFnVUd0XuCLmfvwA&s"; // Placeholder image
-                img.alt = "Tanah Image";
+          // Create the image section (use a placeholder image or dynamic image based on your needs)
+          const imgDiv = document.createElement('div');
+          imgDiv.className = 'relative';
 
-                const priceDiv = document.createElement('div');
-                priceDiv.className = "absolute bottom-4 right-4 bg-white/90 rounded px-4 py-2";
-                priceDiv.innerHTML = `<span class="font-bold text-xl">Rp. ${tanah.price.toLocaleString()}${tanah.isNegotable && 'IsNegotable'}</span>`;
+          const img = document.createElement('img');
+          img.className = 'w-full';
+          img.src =
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSJW9evu0DJujsURWumbiFnVUd0XuCLmfvwA&s'; // Placeholder image
+          img.alt = 'Tanah Image';
 
-                imgDiv.appendChild(img);
-                imgDiv.appendChild(priceDiv);
-                card.appendChild(imgDiv);
+          const priceDiv = document.createElement('div');
+          priceDiv.className =
+            'absolute bottom-4 right-4 bg-white/90 rounded px-4 py-2';
+          priceDiv.innerHTML = `<span class="font-bold text-xl flex items-center gap-2">Rp. ${
+            tanah.price
+          }${
+            tanah.isNegotable
+              ? `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+  <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z"/>
+  <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708"/>
+</svg>`
+              : ''
+          }</span>`;
 
-                // Create the content section
-                const contentDiv = document.createElement('div');
-                contentDiv.className = "px-6 py-4 space-y-1 text-md";
+          imgDiv.appendChild(img);
+          imgDiv.appendChild(priceDiv);
+          card.appendChild(imgDiv);
 
-                // Location and map link
-                const locationDiv = document.createElement('div');
-                locationDiv.className = "mb-3 flex items-start gap-2";
-                locationDiv.innerHTML = `
+          // Create the content section
+          const contentDiv = document.createElement('div');
+          contentDiv.className = 'px-6 py-4 space-y-1 text-md';
+
+          // Location and map link
+          const locationDiv = document.createElement('div');
+          locationDiv.className = 'mb-3 flex items-start gap-2';
+          locationDiv.innerHTML = `
             <div>
-                <div class="font-bold text-xl mb-2">${tanah.location.address}</div>
-                <span class="text-sm underline"><a href="${tanah.location.coordinateGMapsUrl}" target="_blank">Lihat di google maps</a></span>
+                <div class="font-bold text-xl mb-2">${
+                  tanah.location.address
+                }</div>
+                <span class="text-sm underline"><a href="${
+                  tanah.location.coordinateGMapsUrl
+                }" target="_blank">Lihat di google maps</a></span>
             </div>
-            <button data-id="${index}" class="bookmark-btn p-2 border border-slate-400 rounded-full -mr-2 ${isBookmarked(index) ? '!border-blue-400 !bg-slate-400 !text-white' : ''}">
+            <button data-id="${
+              tanah.id
+            }" class="bookmark-btn p-2 border border-slate-400 rounded-full -mr-2 ${
+            isBookmarked(tanah.id)
+              ? '!border-blue-400 !bg-slate-400 !text-white'
+              : ''
+          }">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">
                     <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z"/>
                 </svg>
             </button>
         `;
-                contentDiv.appendChild(locationDiv);
+          contentDiv.appendChild(locationDiv);
 
-                // Size information
-                const sizeDiv = document.createElement('div');
-                sizeDiv.className = "flex items-center justify-between";
-                sizeDiv.innerHTML = `<p>${tanah.type.charAt(0).toUpperCase() + tanah.type.slice(1)}</p><p>${tanah.size.width} x ${tanah.size.height} m</p>`;
-                contentDiv.appendChild(sizeDiv);
+          // Size information
+          const sizeDiv = document.createElement('div');
+          sizeDiv.className = 'flex items-center justify-between';
+          sizeDiv.innerHTML = `<p>${
+            tanah.type.charAt(0).toUpperCase() + tanah.type.slice(1)
+          }</p><p>${tanah.size.width} x ${tanah.size.height} m</p>`;
+          contentDiv.appendChild(sizeDiv);
 
-                // Installment and negotiable information
-                const installmentDiv = document.createElement('div');
-                installmentDiv.className = "flex items-center justify-between";
-                installmentDiv.innerHTML = `<p>${tanah.isInstallment ? 'Bisa angsur' : 'Tidak bisa angsur'}</p><p>${tanah.monthInstallment} x</p>`;
-                contentDiv.appendChild(installmentDiv);
+          // Installment and negotiable information
+          const installmentDiv = document.createElement('div');
+          installmentDiv.className = 'flex items-center justify-between';
+          installmentDiv.innerHTML = `<p>${
+            tanah.isInstallment ? 'Bisa angsur' : 'Tidak bisa angsur'
+          }</p><p>${tanah.monthInstallment} x</p>`;
+          contentDiv.appendChild(installmentDiv);
 
-                // Publisher information
-                const publisherDiv = document.createElement('p');
-                publisherDiv.innerHTML = `Publisher: <span>${tanah.publisher.name} (${tanah.publisher.email})</span>`;
-                contentDiv.appendChild(publisherDiv);
+          // Publisher information
+          const publisherDiv = document.createElement('p');
+          publisherDiv.innerHTML = `Publisher: <span>${tanah.publisher.name} (${tanah.publisher.email})</span>`;
+          contentDiv.appendChild(publisherDiv);
 
-                // Append content div to card
-                card.appendChild(contentDiv);
+          // Append content div to card
+          card.appendChild(contentDiv);
 
-                // Create button to buy
-                const buttonDiv = document.createElement('div');
-                buttonDiv.className = "p-4";
-                const button = document.createElement('button');
-                button.className = "w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded";
-                button.innerText = "Beli";
-                button.onclick = () => openNegotiableModal(tanah);
-                buttonDiv.appendChild(button);
-                card.appendChild(buttonDiv);
+          // Create button to buy
+          const buttonDiv = document.createElement('div');
+          buttonDiv.className = 'p-4';
+          const button = document.createElement('button');
+          button.className =
+            'w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded';
+          button.innerText = tanah.isNegotable ? 'Beli/Nego' : 'Beli';
+          button.onclick = () => openNegotiableModal(tanah);
+          buttonDiv.appendChild(button);
+          card.appendChild(buttonDiv);
 
-                bookmarkList.appendChild(card);
-            });
-        };
+          bookmarkList.appendChild(card);
+        });
 
-        // Render bookmarks on page load
-        document.addEventListener('DOMContentLoaded', renderBookmarks);
+        // After rendering, attach event listeners for bookmark buttons
+        attachBookmarkEventListeners();
+      };
+
+      // Function to attach event listeners for bookmark buttons
+      const attachBookmarkEventListeners = () => {
+        console.log('Attaching event listeners');
+        document.querySelectorAll('.bookmark-btn').forEach((button) => {
+          button.addEventListener('click', (event) => {
+            const id = parseInt(event.currentTarget.getAttribute('data-id'));
+            const bookmarks = loadBookmarks();
+            const item = bookmarks.find((tanah) => tanah.id === id);
+            if (item) {
+              toggleBookmark({
+                ...item,
+                id,
+              });
+            }
+          });
+        });
+      };
+
+      // Render bookmarks on page load
+      document.addEventListener('DOMContentLoaded', renderBookmarks);
+
+      // Toggle mobile menu
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
     </script>
-</body>
-
+  </body>
 </html>

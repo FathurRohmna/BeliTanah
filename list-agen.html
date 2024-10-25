@@ -1,150 +1,374 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>BeliTanah | List agen</title>
 
-    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
-</head>
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
+  </head>
 
-<body>
+  <body>
     <div class="relative w-full">
-        <div class="w-full bg-gray-900 text-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-                <h5 class="font-bold text-lg">Kenali kita lebih lanjut <a href="./tentang.html" class="underline">disini</a></h5>
-            </div>
+      <div class="w-full bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+          <h5 class="font-bold text-lg">
+            Kenali kami lebih dekat dan temukan apa yang bisa kami tawarkan!
+            <a href="./tentang.html" class="underline">di sini</a>
+          </h5>
         </div>
-        <div class="relative w-full">
-            <div class="absolute top-0 right-0 left-0 bg-white/70">
-                <div class="max-w-7xl mx-auto">
-                    <div class="relative z-10 lg:pb-8 pb-0 bg-transparent">
-                        <div class="relative pt-6 px-4 sm:px-6 lg:px-8">
-                            <nav class="relative flex items-center justify-between sm:h-10">
-                                <div class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
-                                    <div class="flex items-center justify-between w-full md:w-auto">
-                                        <a href="./index.html" class="ml-2">
-                                            <span class="sr-only">BeliTanah</span>
-                                            <img class="h-6 w-auto" src="/assets/images/beli-tanah.png" />
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
-                                    <a href="./list-tanah.html" class="font-semibold text-lg text-gray-700 hover:text-gray-500">List tanah</a>
-                                    <a href="./list-agen.html" class="font-semibold text-lg text-gray-700 hover:text-gray-500">List agen</a>
-                                    <a href="./simulasi-harga.html" class="font-semibold text-lg text-gray-700 hover:text-gray-500">Simulasi harga</a>
-                                    <a href="./kontak.html" class="font-semibold text-lg  text-gray-700 hover:text-gray-500">Kontak</a>
-                                    <a href="./authentikasi.html" class="font-semibold text-lg  text-gray-700 hover:text-gray-500">Jual tanah</a>
-                                </div>
-                            </nav>
-                        </div>
+      </div>
+      <div class="relative w-full">
+        <div class="absolute top-0 right-0 left-0 bg-white md:bg-white/70">
+          <div class="max-w-7xl mx-auto">
+            <div class="relative z-10 lg:pb-8 pb-0 bg-white lg:bg-transparent">
+              <div class="relative py-3 md:pb-0 md:pt-6 px-4 sm:px-6 lg:px-8">
+                <nav class="relative flex items-center justify-between sm:h-10">
+                  <div
+                    class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0"
+                  >
+                    <div
+                      class="flex items-center justify-between w-full md:w-auto"
+                    >
+                      <a href="./index.html" class="ml-2">
+                        <span class="sr-only">BeliTanah</span>
+                        <img
+                          class="h-6 w-auto"
+                          src="/assets/images/beli-tanah.png"
+                        />
+                      </a>
                     </div>
+                  </div>
+                  <!-- Hamburger Button -->
+                  <div class="md:hidden">
+                    <button
+                      id="mobile-menu-button"
+                      class="flex items-center p-2 text-gray-700 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500"
+                    >
+                      <span class="sr-only">Open menu</span>
+                      <svg
+                        class="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M4 6h16M4 12h16m-7 6h7"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+                  <!-- Desktop Menu -->
+                  <div
+                    class="hidden md:block md:ml-10 md:pr-4 md:space-x-8"
+                    id="desktop-menu"
+                  >
+                    <a
+                      href="./list-tanah.html"
+                      class="font-semibold text-lg text-gray-700 hover:text-gray-500"
+                      >List tanah</a
+                    >
+                    <a
+                      href="./list-agen.html"
+                      class="font-semibold text-lg text-gray-700 hover:text-gray-500"
+                      >List agen</a
+                    >
+                    <a
+                      href="./simulasi-harga.html"
+                      class="font-semibold text-lg text-gray-700 hover:text-gray-500"
+                      >Bookmarks</a
+                    >
+                    <a
+                      href="./kontak.html"
+                      class="font-semibold text-lg text-gray-700 hover:text-gray-500"
+                      >Kontak</a
+                    >
+                    <a
+                      href="./authentikasi.html"
+                      class="font-semibold text-lg text-gray-700 hover:text-gray-500"
+                      >Jual tanah</a
+                    >
+                  </div>
+                </nav>
+                <!-- Mobile Menu -->
+                <div id="mobile-menu" class="hidden md:hidden mt-4">
+                  <div class="flex flex-col space-y-2">
+                    <a
+                      href="./list-tanah.html"
+                      class="block font-semibold text-lg text-gray-700 hover:text-gray-500"
+                      >List tanah</a
+                    >
+                    <a
+                      href="./list-agen.html"
+                      class="block font-semibold text-lg text-gray-700 hover:text-gray-500"
+                      >List agen</a
+                    >
+                    <a
+                      href="./simulasi-harga.html"
+                      class="block font-semibold text-lg text-gray-700 hover:text-gray-500"
+                      >Bookmarks</a
+                    >
+                    <a
+                      href="./kontak.html"
+                      class="block font-semibold text-lg text-gray-700 hover:text-gray-500"
+                      >Kontak</a
+                    >
+                    <a
+                      href="./authentikasi.html"
+                      class="block font-semibold text-lg text-gray-700 hover:text-gray-500"
+                      >Jual tanah</a
+                    >
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
 
-        
-        <!-- Agent List -->
-        <main class="min-h-[80vh] my-24">
-            <div class="max-w-7xl mx-auto space-y-6">
-                <h3 class="mt-6 text-3xl font-bold">List Agen</h3>
-                <div id="agen-list" class="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
-                    <!-- JavaScript will populate the list here -->
-                </div>
-            </div>
-        </main>
-
-        <!-- Modal (hidden by default) -->
-        <div id="agent-modal" class="fixed inset-0 z-50 hidden bg-gray-900 bg-opacity-75 flex items-center justify-center">
-            <div class="bg-white w-full max-w-md rounded-lg p-6 relative">
-                <button class="absolute top-3 right-3 text-gray-500 hover:text-gray-700" onclick="closeModal()">&times;</button>
-                <div class="text-center">
-                    <img id="modal-agent-img" class="w-[150px] h-[150px] rounded-full object-cover mx-auto mb-4" src="" alt="">
-                    <h3 id="modal-agent-name" class="text-2xl font-bold mb-2"></h3>
-                    <p id="modal-agent-rating" class="text-lg mb-2"></p>
-                    <p id="modal-agent-commission" class="text-lg"></p>
-                </div>
-            </div>
+      <!-- Agent List -->
+      <main class="min-h-[80vh] my-24 px-6">
+        <div class="max-w-7xl mx-auto space-y-6">
+          <div class="mb-24">
+            <h3 class="mt-6 text-3xl font-bold">List Agen</h3>
+            <h4 class="text-pretty text-lg font-medium text-gray-500">
+              Temukan agen terpercaya untuk membantu Anda dalam pencarian tanah.
+            </h4>
+          </div>
+          <div
+            id="agen-list"
+            class="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6"
+          >
+            <!-- JavaScript will populate the list here -->
+          </div>
         </div>
-    
-        <footer class="bg-gray-900 pt-16 pb-20 px-8 box-border">
-            <div class="max-w-7xl mx-auto text-xs">
-                <div
-                    class="relative grid grid-cols-2 gap-8 lg:grid-cols-5 sm:grid-cols-4 pb-8 sm:pb-10 md:pb-12 lg:pb-14 text-white">
-                    <div class="mb-6">
-                        <h1 class="text-3xl font-bold text-white mb-2">BeliTanah</h1>
-                        <p class="mb-2 leading-6">Temukan Tanah Impianmu di BeliTanah.</p>
-                        
-                    </div>
-                    <div class="">
-                        <h1 class="font-bold mb-2 text-white">Explore</h1>
-                        <a class="block leading-6">List tanah</a>
-                        <a class="block leading-6">List agen</a>
-                        <a class="block leading-6">Simulasi harga</a>
-                        <a href="./kontak.html" class="block leading-6">Kontak</a>
-                        <a class="block leading-6">Jual tanah</a>
-                    </div>
-                    <div class="">
-                        <h1 class="font-bold mb-2 text-white">Visit</h1>
-                        <p class="leading-6">Karangbawang, Kawunganten <br /> Cilacap, Jawa Tengah <br /> Indonesia.</p>
-                    </div>
-                    <div>
-                        <h1 class="mb-2 font-bold text-white">New Business</h1>
-                        <p class="leading-6">fr089138@gmail.com</p>
-                        <p class="leading-6">+62 838-6788-6915</p>
-                    </div>
-                </div>
+      </main>
+
+      <!-- Modal (hidden by default) -->
+      <div
+        id="agent-modal"
+        class="fixed inset-0 z-50 hidden bg-gray-900 bg-opacity-75 flex items-center justify-center"
+      >
+        <div class="bg-white w-full max-w-md rounded-lg p-6 relative">
+          <div class="text-center">
+            <img
+              id="modal-agent-img"
+              class="w-[150px] h-[150px] rounded-full object-cover mx-auto mb-4"
+              src=""
+              alt=""
+            />
+            <h3 id="modal-agent-name" class="text-2xl font-bold mb-2"></h3>
+            <p id="modal-agent-rating" class="text-lg mb-2"></p>
+            <p id="modal-agent-commission" class="text-lg"></p>
+          </div>
+
+          <form id="agent-form" onsubmit="return sendWhatsApp(event)">
+            <div class="mt-4">
+              <input
+                type="text"
+                id="budget"
+                placeholder="Budget"
+                class="w-full mb-2 p-2 border border-gray-300 rounded"
+                required
+              />
+              <input
+                type="text"
+                id="home-size"
+                placeholder="Ukuran tanah"
+                class="w-full mb-2 p-2 border border-gray-300 rounded"
+                required
+              />
+              <input
+                type="text"
+                id="location"
+                placeholder="Lokasi"
+                class="w-full mb-4 p-2 border border-gray-300 rounded"
+                required
+              />
             </div>
-        </footer>
+            <button
+              type="submit"
+              class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 rounded"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <footer class="bg-gray-900 pt-16 pb-20 px-8 box-border">
+        <div class="max-w-7xl mx-auto text-xs">
+          <div
+            class="relative grid grid-cols-2 gap-8 lg:grid-cols-5 sm:grid-cols-4 pb-8 sm:pb-10 md:pb-12 lg:pb-14 text-white"
+          >
+            <div class="mb-6">
+              <h1 class="text-3xl font-bold text-white mb-2">BeliTanah</h1>
+              <p class="mb-2 leading-6">Temukan Tanah Impianmu di BeliTanah.</p>
+            </div>
+            <div class="">
+                <h1 class="font-bold mb-2 text-white">Explore</h1>
+                <a href="./list-tanah.html" class="block leading-6">List tanah</a>
+                <a href="./list-agen.html" class="block leading-6">List agen</a>
+                <a href="./simulasi-harga.html" class="block leading-6">Bookmarks</a>
+                <a href="./kontak.html" class="block leading-6">Kontak</a>
+                <a href="./authentikasi.html" class="block leading-6">Jual tanah</a>
+              </div>
+            <div class="">
+              <h1 class="font-bold mb-2 text-white">Visit</h1>
+              <p class="leading-6">
+                Cilacap, Jawa Tengah <br />
+                Indonesia.
+              </p>
+            </div>
+            <div>
+              <h1 class="mb-2 font-bold text-white">New Business</h1>
+              <p class="leading-6">fr089138@gmail.com</p>
+              <p class="leading-6">+62 838-6788-6915</p>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
 
+    <script type="module">
+      import { createBeliTanahKeAgenTemplate } from './assets/js/constants.js';
+
+      const agents = [
+        {
+          name: 'Adry M.',
+          rating: '4.5/1000',
+          commission: '3%',
+          img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSJW9evu0DJujsURWumbiFnVUd0XuCLmfvwA&s',
+          id: 1,
+          phoneNumber: '6283867886915',
+        },
+        {
+          name: 'Budi S.',
+          rating: '4.8/1500',
+          commission: '2.5%',
+          img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSJW9evu0DJujsURWumbiFnVUd0XuCLmfvwA&s',
+          id: 2,
+          phoneNumber: '6283867886915',
+        },
+        {
+          name: 'Citra W.',
+          rating: '4.9/2000',
+          commission: '3.5%',
+          img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSJW9evu0DJujsURWumbiFnVUd0XuCLmfvwA&s',
+          id: 3,
+          phoneNumber: '6283867886915',
+        },
+      ];
+
+      let currentAgent = null;
+
+      const agentList = document.getElementById('agen-list');
+      const agentModal = document.getElementById('agent-modal');
+      const agentForm = document.getElementById('agent-form');
+
+      // Function to close the modal
+      function closeModal() {
+        console.log('close modal');
+        agentModal.classList.add('hidden');
+        agentForm.reset();
+      }
+
+      // Function to open the modal
+      function openModal(id) {
+        const agent = agents.find((agent) => agent.id === id);
+        currentAgent = agent;
+        document.getElementById('modal-agent-name').innerText = agent.name;
+        document.getElementById(
+          'modal-agent-rating'
+        ).innerText = `Rating kepuasan: ${agent.rating}`;
+        document.getElementById(
+          'modal-agent-commission'
+        ).innerText = `Presentase komisi: ${agent.commission}`;
+        document.getElementById('modal-agent-img').src = agent.img;
+
+        agentModal.classList.remove('hidden');
+      }
+
+      // Function to send WhatsApp message
+      function sendWhatsApp(event) {
+        event.preventDefault(); // Prevent form submission
+        const budget = document.getElementById('budget').value;
+        const homeSize = document.getElementById('home-size').value;
+        const location = document.getElementById('location').value;
+
+        // Construct the WhatsApp message
+        const message = createBeliTanahKeAgenTemplate({
+          agentName: currentAgent.name,
+          budget,
+          homeSize,
+          location,
+        });
+        const whatsappLink = `https://api.whatsapp.com/send/?phone=${
+          currentAgent.phoneNumber
+        }&text=${encodeURIComponent(message)}&app_absent=0`;
+        window.open(whatsappLink, '_blank');
+
+        closeModal(); // Close the modal after sending the message
+      }
+
+      // Populate the agent list
+      agents.forEach((agent) => {
+        const agentCard = document.createElement('div');
+        agentCard.classList.add(
+          'w-full',
+          'rounded',
+          'overflow-hidden',
+          'shadow-lg'
+        );
+        agentCard.innerHTML = `
+            <div class="w-full flex items-center justify-center">
+              <img class="w-[150px] h-[150px] rounded-full object-cover" src="${agent.img}" alt="${agent.name}">
+            </div>
+            <div class="px-6 py-4 space-y-1 text-md">
+              <div class="font-bold text-xl mb-2 text-center">${agent.name}</div>
+              <p>Rating kepuasan: <span>${agent.rating}</span></p>
+              <p>Presentase komisi: <span>${agent.commission}</span></p>
+            </div>
+            <div class="p-4 pt-1">
+              <button class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded agent-button" data-id="${agent.id}">
+                Hubungi
+              </button>
+            </div>
+          `;
+        agentList.appendChild(agentCard);
+      });
+
+      // Add event listeners for all agent buttons
+      document.querySelectorAll('.agent-button').forEach((button) => {
+        button.addEventListener('click', () => {
+          const agentId = parseInt(button.getAttribute('data-id'));
+          openModal(agentId);
+        });
+      });
+
+      // Add event listener to the form
+      agentForm.addEventListener('submit', sendWhatsApp);
+
+      // Add event listener to close the modal
+      document
+        .querySelector('.close-modal-button')
+        .addEventListener('click', closeModal);
+    </script>
 
     <script>
-        const agents = [
-            { name: 'Adry M.', rating: '4.5/1000', commission: '3%', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSJW9evu0DJujsURWumbiFnVUd0XuCLmfvwA&s', id: 1 },
-            { name: 'Budi S.', rating: '4.8/1500', commission: '2.5%', img: 'https://via.placeholder.com/150', id: 2 },
-            { name: 'Citra W.', rating: '4.9/2000', commission: '3.5%', img: 'https://via.placeholder.com/150', id: 3 }
-        ];
+    // Toggle mobile menu
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
 
-        const agentList = document.getElementById('agen-list');
-
-        agents.forEach(agent => {
-            const agentCard = document.createElement('div');
-            agentCard.classList.add('w-full', 'rounded', 'overflow-hidden', 'shadow-lg');
-            agentCard.innerHTML = `
-                <div class="w-full flex items-center justify-center">
-                    <img class="w-[150px] h-[150px] rounded-full object-cover" src="${agent.img}" alt="${agent.name}">
-                </div>
-                <div class="px-6 py-4 space-y-1 text-md">
-                    <div class="font-bold text-xl mb-2 text-center">${agent.name}</div>
-                    <p>Rating kepuasan: <span>${agent.rating}</span></p>
-                    <p>Presentase komisi: <span>${agent.commission}</span></p>
-                </div>
-                <div class="p-4 pt-1">
-                    <button class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="openModal(${agent.id})">
-                        Hubungi
-                    </button>
-                </div>
-            `;
-            agentList.appendChild(agentCard);
+        mobileMenuButton.addEventListener('click', () => {
+        console.log('clicked');
+        mobileMenu.classList.toggle('hidden');
         });
-
-        function openModal(id) {
-            const agent = agents.find(agent => agent.id === id);
-            document.getElementById('modal-agent-name').innerText = agent.name;
-            document.getElementById('modal-agent-rating').innerText = `Rating kepuasan: ${agent.rating}`;
-            document.getElementById('modal-agent-commission').innerText = `Presentase komisi: ${agent.commission}`;
-            document.getElementById('modal-agent-img').src = agent.img;
-
-            document.getElementById('agent-modal').classList.remove('hidden');
-        }
-
-        function closeModal() {
-            document.getElementById('agent-modal').classList.add('hidden');
-        }
     </script>
-</body>
-
+  </body>
 </html>

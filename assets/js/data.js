@@ -1,5 +1,6 @@
 export const recommendationData = [
     {
+        id: 1,
         location: {
             address: 'Jalan Raya No. 123, Bogor, Indonesia',
             coordinateGMapsUrl: 'https://www.google.com/maps/place/Jalan+Raya+No.+123,+Bogor',
@@ -20,6 +21,7 @@ export const recommendationData = [
         monthInstallment: 12 // 12 months
     },
     {
+        id: 2,
         location: {
             address: 'Jalan Kebon Kacang No. 45, Jakarta, Indonesia',
             coordinateGMapsUrl: 'https://www.google.com/maps/place/Jalan+Kebon+Kacang+No.+45,+Jakarta',
@@ -40,6 +42,7 @@ export const recommendationData = [
         monthInstallment: 24 // 24 months
     },
     {
+        id: 3,
         location: {
             address: 'Jalan Hutan No. 78, Bandung, Indonesia',
             coordinateGMapsUrl: 'https://www.google.com/maps/place/Jalan+Hutan+No.+78,+Bandung',
@@ -60,6 +63,7 @@ export const recommendationData = [
         monthInstallment: 0 // not applicable
     },
     {
+        id:4,
         location: {
             address: 'Jalan Gunung No. 12, Yogyakarta, Indonesia',
             coordinateGMapsUrl: 'https://www.google.com/maps/place/Jalan+Gunung+No.+12,+Yogyakarta',
