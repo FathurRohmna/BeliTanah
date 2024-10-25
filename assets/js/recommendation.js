@@ -39,6 +39,7 @@ const isBookmarked = (id) => {
  * Closes the currently open modal by removing the 'open' class and restores body scrolling.
  */
 function closeModal() {
+    console.log('close')
     document.querySelector('.custom-modal.open')?.classList.remove('open');
     document.body.classList.remove('modal-open');
 }
@@ -76,19 +77,21 @@ function openNegotiableModal(item) {
     document.getElementById('confirm-negotiation-btn').onclick = () => {
         let negotiatedPrice = item.price;
 
-        // If the item is negotiable, capture the user-updated price
+         // If the item is negotiable, capture the user-updated price
         if (item.isNegotable) {
             const priceInput = document.getElementById('negotiable-price').value;
             negotiatedPrice = parseFloat(priceInput.replace(/,/g, '')); // Convert formatted price back to number
+            console.log('Negotiated Price:', negotiatedPrice); // Log the negotiated price for debugging
         }
-
-        console.log('Negotiating with item:', {
-            ...item,
-            negotiatedPrice: negotiatedPrice
-        });
-
         closeModal();
     };
+
+    // Update the negotiation logic
+    document.getElementById('cancel-negotiation-btn').onclick = () => {
+        closeModal();
+    };
+
+
 
     // Open the modal
     toggleFormAddArticle('negosiasi-modal');

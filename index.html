@@ -15,15 +15,17 @@
     <div class="relative w-full">
         <div class="w-full bg-gray-900 text-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-                <h5 class="font-bold text-lg">Kenali kita lebih lanjut <a href="./tentang.html"
-                        class="underline">disini</a></h5>
+                <h5 class="font-bold text-lg">
+                    Kenali kami lebih dekat dan temukan apa yang bisa kami tawarkan! <a href="./tentang.html"
+                        class="underline">di sini</a>
+                </h5>
             </div>
         </div>
         <div class="relative w-full">
-            <div class="absolute top-0 right-0 left-0 bg-white/70">
+            <div class="absolute top-0 right-0 left-0 bg-white md:bg-white/70">
                 <div class="max-w-7xl mx-auto">
                     <div class="relative z-10 lg:pb-8 pb-0 bg-transparent">
-                        <div class="relative pt-6 px-4 sm:px-6 lg:px-8">
+                        <div class="relative py-3 md:pb-0 md:pt-6 px-4 sm:px-6 lg:px-8">
                             <nav class="relative flex items-center justify-between sm:h-10">
                                 <div class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                                     <div class="flex items-center justify-between w-full md:w-auto">
@@ -33,7 +35,20 @@
                                         </a>
                                     </div>
                                 </div>
-                                <div class="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
+                                <!-- Hamburger Button -->
+                                <div class="md:hidden">
+                                    <button id="mobile-menu-button"
+                                        class="flex items-center p-2 text-gray-700 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500">
+                                        <span class="sr-only">Open menu</span>
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M4 6h16M4 12h16m-7 6h7"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <!-- Desktop Menu -->
+                                <div class="hidden md:block md:ml-10 md:pr-4 md:space-x-8" id="desktop-menu">
                                     <a href="./list-tanah.html"
                                         class="font-semibold text-lg text-gray-700 hover:text-gray-500">List tanah</a>
                                     <a href="./list-agen.html"
@@ -42,51 +57,52 @@
                                         class="font-semibold text-lg text-gray-700 hover:text-gray-500">Simulasi
                                         harga</a>
                                     <a href="./kontak.html"
-                                        class="font-semibold text-lg  text-gray-700 hover:text-gray-500">Kontak</a>
+                                        class="font-semibold text-lg text-gray-700 hover:text-gray-500">Kontak</a>
                                     <a href="./authentikasi.html"
-                                        class="font-semibold text-lg  text-gray-700 hover:text-gray-500">Jual tanah</a>
+                                        class="font-semibold text-lg text-gray-700 hover:text-gray-500">Jual tanah</a>
                                 </div>
                             </nav>
+                            <!-- Mobile Menu -->
+                            <div id="mobile-menu" class="hidden md:hidden mt-4">
+                                <div class="flex flex-col space-y-2">
+                                    <a href="./list-tanah.html"
+                                        class="block font-semibold text-lg text-gray-700 hover:text-gray-500">List
+                                        tanah</a>
+                                    <a href="./list-agen.html"
+                                        class="block font-semibold text-lg text-gray-700 hover:text-gray-500">List
+                                        agen</a>
+                                    <a href="./simulasi-harga.html"
+                                        class="block font-semibold text-lg text-gray-700 hover:text-gray-500">Simulasi
+                                        harga</a>
+                                    <a href="./kontak.html"
+                                        class="block font-semibold text-lg text-gray-700 hover:text-gray-500">Kontak</a>
+                                    <a href="./authentikasi.html"
+                                        class="block font-semibold text-lg text-gray-700 hover:text-gray-500">Jual
+                                        tanah</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <header class="w-full bg-gray-300 py-32">
-            <div class="max-w-7xl mx-auto text-black mt-[96px] flex justify-center h-full">
-                <div class="text-center mt-6">
-                    <h1 class="text-4xl font-extrabold">Rekomendasi Pilihan Untuk Anda</h1>
+        <header class="w-full bg-gray-200">
+            <div class="relative isolate px-6 pt-14 lg:px-8">
+                <div class="mx-auto max-w-2xl py-32 sm:py-48">
+                    <div class="text-center">
+                        <h1 class="text-balance text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">Temukan
+                            Rekomendasi Pilihan Untuk Anda</h1>
+                        <p class="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">Temukan produk dan layanan terbaik sesuai dengan kebutuhan
+                            Anda. Kami telah memilihkan yang terbaik hanya untuk Anda!
+                        </p>
 
-                    <h3 class="max-w-lg mx-auto mt-8 text-lg">Temukan produk dan layanan terbaik sesuai dengan kebutuhan
-                        Anda. Kami telah memilihkan yang terbaik hanya untuk Anda!</h3>
-
-                    <div class="max-w-7xl mx-auto text-center">
-                        <h2 class="font-bold mb-6">Rekomendasi berdasarkan:</h2>
-                        <ul class="space-y-4 text-sm">
-                            <li>
-                                <span class="font-semibold">Budget:</span> Rekomendasi ini disesuaikan dengan berbagai
-                                anggaran, mulai dari pilihan terjangkau hingga investasi premium.
-                            </li>
-                            <li>
-                                <span class="font-semibold">Lokasi:</span> Pilihan lokasi yang strategis, memastikan
-                                aksesibilitas dan potensi pertumbuhan yang baik.
-                            </li>
-                            <li>
-                                <span class="font-semibold">Kunjungan:</span> Daftar ini mencakup properti yang paling
-                                banyak dikunjungi, memberikan Anda opsi yang telah terbukti menarik minat pembeli lain.
-                            </li>
-                            <li>
-                                <span class="font-semibold">Popularitas:</span> Semua rekomendasi dipilih berdasarkan
-                                popularitasnya di kalangan pembeli, memastikan Anda mendapatkan pilihan terbaik.
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </div>
         </header>
 
-        <main class="min-h-[80vh] my-24">
+        <main class="min-h-[80vh] my-24 px-6 pt-14 lg:px-8">
             <div class="max-w-7xl mx-auto">
                 <h3 class="mt-6 mb-8 text-3xl font-bold">Rekomendasi tanah</h3>
 
@@ -135,14 +151,24 @@
                 <!-- Dynamic content will be injected here -->
             </div>
             <div class="d-flex justify-content-end mt-4">
-                <button class="btn btn-secondary me-2" onclick="closeModal()">Cancel</button>
+                <button id="cancel-negotiation-btn" class="btn btn-secondary me-2" onclick="closeModal()">Cancel</button>
                 <button id="confirm-negotiation-btn" class="btn btn-success">Negotiate</button>
             </div>
         </div>
     </div>
 
 
-    <script src="./assets/js/recommendation.js" type="module"></script>
+    <script src="./assets/js/recommendation.js" type="module">
+
+        // Toggle mobile menu
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        mobileMenuButton.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+
+    </script>
 </body>
 
 </html>
